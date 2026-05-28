@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-// Resolve base API endpoint (localhost in development, root in production)
+// Resolve base API endpoint (localhost in development, Render URL in production)
 const API_BASE = window.location.hostname === 'localhost' 
   ? 'http://localhost:5000' 
-  : '';
+  : (import.meta.env.VITE_API_URL || '');
 
 const api = axios.create({
   baseURL: `${API_BASE}/api`,

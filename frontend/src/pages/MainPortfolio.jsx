@@ -62,7 +62,7 @@ const MainPortfolio = () => {
   // Load Portfolio Elements from backend API
   useEffect(() => {
     const fetchData = async () => {
-      const apiBase = window.location.hostname === 'localhost' ? 'http://localhost:5000' : '';
+      const apiBase = window.location.hostname === 'localhost' ? 'http://localhost:5000' : (import.meta.env.VITE_API_URL || '');
       
       try {
         // Projects
@@ -236,7 +236,7 @@ const MainPortfolio = () => {
     setFormLoading(true);
     setFormStatus({ success: null, message: '' });
 
-    const apiBase = window.location.hostname === 'localhost' ? 'http://localhost:5000' : '';
+    const apiBase = window.location.hostname === 'localhost' ? 'http://localhost:5000' : (import.meta.env.VITE_API_URL || '');
 
     try {
       const res = await axios.post(`${apiBase}/api/messages`, formData);
