@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Core Body Layout Settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #030014;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Premium Typography Rules */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', 'Rajdhani', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* 1. Custom Futuristic Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030014;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00f5ff, #ff007f);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff007f, #39ff14);
+}
+
+/* 2. Premium Glassmorphic UI Cards */
+.glass-card {
+  background: rgba(3, 0, 20, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 245, 255, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 245, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-card-magenta:hover {
+  border-color: rgba(255, 0, 127, 0.35);
+  box-shadow: 0 8px 30px rgba(255, 0, 127, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-card-green:hover {
+  border-color: rgba(57, 255, 20, 0.35);
+  box-shadow: 0 8px 30px rgba(57, 255, 20, 0.15);
+  transform: translateY(-4px);
+}
+
+/* 3. Sleek Glowing Neon Typography Gradients */
+.text-gradient-neon {
+  background: linear-gradient(135deg, #00f5ff 0%, #ff007f 50%, #39ff14 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+.text-gradient-cyan-magenta {
+  background: linear-gradient(135deg, #00f5ff 0%, #ff007f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* 4. Interactive Radial Glow Spotlights */
+.radial-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 5. Custom Trailing Custom Cursor styles */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background-color: #00f5ff;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: width 0.3s, height 0.3s;
+}
+
+.custom-cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 245, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.08s ease-out, border-color 0.3s;
+}
+
+/* 6. Glowing Grid Underlay Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
+}
+
+/* 7. Timeline Styling Accessories */
+.timeline-track {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #00f5ff 0%, #ff007f 50%, #39ff14 100%);
+}
+
+@media (min-width: 768px) {
+  .timeline-track {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* 8. Neon Cyberpunk Glowing Form Controls */
+.cyber-input {
+  background: rgba(3, 0, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  border-color: #00f5ff;
+  box-shadow: 0 0 12px rgba(0, 245, 255, 0.3);
+  background: rgba(3, 0, 20, 0.85);
+}
+
+.cyber-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 9. Premium Neon Action Buttons */
+.cyber-btn-cyan {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: #00f5ff;
+  border: 1px solid #00f5ff;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-btn-cyan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.25), transparent);
+  transition: all 0.5s ease;
+}
+
+.cyber-btn-cyan:hover::before {
+  left: 100%;
+}
+
+.cyber-btn-cyan:hover {
+  background: #00f5ff;
+  color: #030014;
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.cyber-btn-magenta {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: #ff007f;
+  border: 1px solid #ff007f;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.cyber-btn-magenta:hover {
+  background: #ff007f;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 0, 127, 0.5);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Best Practices -->
+    <title>Mukesh V | Premium Full-Stack & AI/ML Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Mukesh V, a B.E. Computer Science Engineering student at SKCET. Specializing in Node.js, React, Spring Boot, Flask, and AI/ML system architectures." />
+    <meta name="keywords" content="Mukesh V, Portfolio, Computer Science student, SKCET, Full Stack Developer, AI/ML, YOLOv8, React, Spring Boot, Express, Node.js" />
+    <meta name="author" content="Mukesh V" />
+    
+    <!-- Google Typography Pre-fetching -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Prevent initial FOUC (flash of unstyled content) on dark page */
+      html, body {
+        background-color: #030014;
+        color: #ffffff;
+      }
+    </style>
+    
+    <!-- Crash Telemetry Reporting Link -->
+    <script>
+      (function() {
+        var apiBase = window.location.hostname === 'localhost' ? 'http://localhost:5000' : '';
+        
+        window.addEventListener('error', function(event) {
+          var errInfo = {
+            type: 'UNCAUGHT_EXCEPTION',
+            message: event.message,
+            filename: event.filename,
+            lineno: event.lineno,
+            colno: event.colno,
+            error: event.error ? event.error.stack : 'No stack trace available'
+          };
+          fetch(apiBase + '/api/debug-log', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ error: JSON.stringify(errInfo, null, 2) })
+          }).catch(function(e) {});
+        });
+
+        window.addEventListener('unhandledrejection', function(event) {
+          var errInfo = {
+            type: 'UNHANDLED_PROJECTION_REJECTION',
+            reason: event.reason ? (event.reason.stack || event.reason.message || String(event.reason)) : 'Unknown reason'
+          };
+          fetch(apiBase + '/api/debug-log', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ error: JSON.stringify(errInfo, null, 2) })
+          }).catch(function(e) {});
+        });
+      })();
+    </script>
+  </head>
+  <body class="bg-cyber-black text-white selection:bg-neon-magenta selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
