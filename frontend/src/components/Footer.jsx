@@ -112,7 +112,7 @@ const Footer = () => {
         </span>
         <div className="flex gap-4">
           <a
-            href="https://github.com/MUKESHV17"
+            href="https://github.com/MUKESHV17/mukesh_portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-neon-cyan"

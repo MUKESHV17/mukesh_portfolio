@@ -1,5 +1,7 @@
 # Premium Cyberpunk Full-Stack Developer Portfolio — Mukesh V
 
+⚡ **Live Production Deployment**: [https://mukesh-portfolio-theta.vercel.app/](https://mukesh-portfolio-theta.vercel.app/)
+
 Welcome to the repository of Mukesh V's premium, recruiter-focused personal developer portfolio website. This production-ready full-stack application features a stunning, high-performance dark cyberpunk space theme with glassmorphic cards, custom canvas particle backdrops, terminal typing effects, and smooth responsive scroll animations.
 
 ---
@@ -110,7 +112,7 @@ On first startup, the backend automatically seeds the MongoDB database with:
 * **Initial Admin Credentials**:
   * **Username**: `admin`
   * **Password**: `MukeshCyber2026!`
-  * **Email**: `mukesh.v2023@skcet.ac.in`
+  * **Email**: `mukesh631701@gmail.com`
 * **3 Major Projects** (Healthcare risk prediction, E-Wallet microservices, YOLO Traffic flow optimizer)
 * **20+ Categorized Skills**
 * **Internship Timelines & Certifications**
